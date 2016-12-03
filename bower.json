@@ -1,0 +1,10 @@
+{
+  "name": "default-heroku",
+  "description": "Default Heroku",
+  "version": "0.0.0",
+  "license": "copyright",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+  }
+}
