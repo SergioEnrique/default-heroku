@@ -3,12 +3,15 @@ var express = require('express')
 var morgan = require("morgan")
 var path = require("path")
 
+// Project dependencies
+var config = require('./config')
+
 var app = express()
 
 // Settings
-app.set('port', (process.env.PORT || 5000))
-app.set('view engine', 'swig')
-app.use(morgan("dev"))
+var app = express()
+app.set('port', (config.port))
+app.use(morgan(config.environment))
 
 // Public folder
 app.use(express.static(path.join(__dirname, "../public")))
