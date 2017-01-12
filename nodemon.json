@@ -6,5 +6,5 @@
   "execMap": {
   	"js": "node --harmony"
   },
-  "ext": "js json"
+  "ext": "js html css json"
 }
