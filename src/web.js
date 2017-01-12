@@ -2,6 +2,8 @@
 var express = require('express')
 var morgan = require("morgan")
 var path = require("path")
+var mongoose = require("mongoose")
+var bodyParser = require("body-parser")
 
 // Project dependencies
 var config = require('./config')
@@ -11,7 +13,11 @@ var app = express()
 // Settings
 var app = express()
 app.set('port', (config.port))
+app.set('views', path.join(__dirname, 'presenter/templates/'))
 app.use(morgan(config.environment))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended:true}))
+// mongoose.connect(config.mongo_url)
 
 // Public folder
 app.use(express.static(path.join(__dirname, "../public")))

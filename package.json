@@ -10,9 +10,11 @@
   },
   "author": "Sergio Enrique Vargas <sergioenrique@me.com>",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "bower": "^1.7.9",
     "express": "^4.11.0",
     "foreman": "^2.0.0",
+    "mongoose": "^4.7.6",
     "morgan": "^1.2.0",
     "path": "^0.12.7"
   },
